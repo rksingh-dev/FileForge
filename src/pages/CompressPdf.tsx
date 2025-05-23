@@ -245,7 +245,7 @@ const PdfCompressor = () => {
       setError("Required libraries not loaded. Please refresh the page.");
       return;
     }
-    
+
     setIsProcessing(true);
     setError(null);
     setCompressionStats(null);
@@ -422,8 +422,8 @@ const PdfCompressor = () => {
       link.download = filename;
       document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
     }
   };
 
@@ -482,8 +482,8 @@ const PdfCompressor = () => {
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
                     </svg>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <p className="text-sm text-gray-600">{file.name}</p>
                     <p className="text-xs text-gray-500">
                       {(file.size / (1024 * 1024)).toFixed(2)} MB
@@ -496,14 +496,14 @@ const PdfCompressor = () => {
         </div>
 
         {/* Compression Settings */}
-        <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+          <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
           <h2 className="text-lg font-semibold mb-4">Compression Level: {compressionLevel}%</h2>
           <div className="mb-4">
             <div className="flex justify-between mb-2">
               <span className="text-sm text-gray-600">Quality Priority</span>
               <span className="text-sm text-gray-600">Size Priority</span>
             </div>
-            <input
+                  <input
               type="range"
               min="0"
               max="100"
@@ -515,7 +515,7 @@ const PdfCompressor = () => {
               <span className="text-xs text-gray-500">Better Quality</span>
               <span className="text-xs text-gray-500">Smaller Size</span>
             </div>
-          </div>
+                  </div>
 
           {/* Compression Level Indicator */}
           <div className="mb-4">
@@ -527,22 +527,22 @@ const PdfCompressor = () => {
                 "Maximum Compression"
               }
             </div>
-          </div>
+                  </div>
           
           {/* Compression Preview */}
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
             <h3 className="font-medium text-gray-700 mb-2">Quality Settings:</h3>
             <div className="grid grid-cols-2 gap-4 text-sm">
-              <div>
+                  <div>
                 <p className="text-gray-600">Image Quality:</p>
                 <p className="font-medium">{Math.round(getCompressionSettings(compressionLevel).imageQuality * 100)}%</p>
-              </div>
+                  </div>
               <div>
                 <p className="text-gray-600">Image Scale:</p>
                 <p className="font-medium">{Math.round(getCompressionSettings(compressionLevel).scale * 100)}%</p>
               </div>
+              </div>
             </div>
-          </div>
 
           {/* File Size Limits */}
           <div className="mt-4 p-4 bg-blue-50 rounded-lg">

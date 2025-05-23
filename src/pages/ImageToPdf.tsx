@@ -245,10 +245,10 @@ const ImageToPdf = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-6">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+      {/* Header */}
         <div className="flex items-center space-x-4 mb-8">
           <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
-            <FileText className="w-5 h-5 text-white" />
+                <FileText className="w-5 h-5 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Image to PDF Converter</h1>
         </div>
@@ -335,7 +335,7 @@ const ImageToPdf = () => {
                   <Plus className="w-8 h-8 mb-2" />
                   <span className="text-sm">Add More</span>
                 </button>
-              </div>
+        </div>
             </div>
 
             {/* Settings Panel */}
@@ -354,7 +354,7 @@ const ImageToPdf = () => {
               {showSettings && (
                 <div className="p-4 border-t space-y-6">
                   {/* Page Size */}
-                  <div>
+            <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Page Size
                     </label>
@@ -394,8 +394,8 @@ const ImageToPdf = () => {
                           {orientation}
                         </button>
                       ))}
-                    </div>
-                  </div>
+                          </div>
+                          </div>
 
                   {/* Margins */}
                   {settings.pageSize !== PAGE_SIZES.FIT && (
@@ -417,7 +417,7 @@ const ImageToPdf = () => {
                             {key.charAt(0) + key.slice(1).toLowerCase()}
                           </button>
                         ))}
-                      </div>
+                        </div>
                     </div>
                   )}
 
@@ -459,8 +459,8 @@ const ImageToPdf = () => {
                           >
                             +
                           </button>
-                        </div>
-                      )}
+                      </div>
+                    )}
                     </div>
                   </div>
                 </div>
