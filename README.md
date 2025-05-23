@@ -23,13 +23,12 @@ A modern, privacy-first web app for compressing, converting, and optimizing imag
 
 ---
 
-## 🖼️ Screenshots
 
 ## 🖼️ Screenshots
 
-![Homepage Screenshot](screenshots/image.png)
+![Homepage Screenshot](image.png)
 
-![Tools Grid](screenshots/tools-grid.png)
+
 
 ---
 
